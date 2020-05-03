@@ -1,0 +1,57 @@
+{
+  "name": "@space-janitor/package-js",
+  "version": "0.0.0",
+  "description": "SpaceJanitor common Node.JS package",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint --fix . && echo 'Lint complete.'",
+    "test": "jest --detectOpenHandles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/space-janitor/package.js.git"
+  },
+  "keywords": [
+    "JavaScript"
+  ],
+  "author": "Carlos A. Betancourt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/space-janitor/package.js/issues"
+  },
+  "homepage": "https://github.com/space-janitor/package.js#readme",
+  "dependencies": {
+    "@space-janitor/common": "file:../common.js",
+    "@space-janitor/common-js": "0.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^25.5.4",
+    "prettier": "^2.0.4"
+  },
+  "jest": {
+    "modulePaths": [
+      "<rootDir>/src/"
+    ],
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "lines": 80
+      }
+    },
+    "automock": false,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/config/"
+    ]
+  }
+}
